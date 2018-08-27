@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단 4,5단 - HTML화면출력</title>
+</head>
+<body>
+    <script>
+            var four = 4;
+            var five = 5;
+            var n = 1;
+            var result;
+            var user = Number(prompt("몇단을 출력하실건가요?"));
+    
+            while (n < 10) {
+                result = four * n;
+                document.write(result + '<br>');
+                n++;
+            }
+    
+            for (var n2 = 1; n2 < 10; n2++) {
+                result = five * n2;
+                document.write(result + '<br>');
+            }
+    
+            for (var n3 = 1; n3 < 10; n3++) {
+                result = user * n3;
+                document.write(result + '<br>');
+            }
+    </script>
+</body>
+</html>
