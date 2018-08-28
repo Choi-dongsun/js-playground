@@ -7,18 +7,16 @@
     <title>구구단 6,7단 - HTML화면출력</title>
 </head>
 <body>
-    <script>
-            var n = 1;
-            while (n < 10) {
-                result = 6 * n;
-                document.write(6 * n + '<br>');
-                n++;
-            }
-    
-            for (var n2 = 1; n2 < 10; n2++) {
-                document.write(7 * n2 + '<br>');
-            }
-
-    </script>
+    <h1> 반복을 사용한 구구단 연습</h1>
+    출력할 단수 : <input type="text" id="num"> <br>
+    <button onclick="runGugudan()">확인</button>
+<script>
+    function runGugudan() {
+        var num = Number(document.getElementById("num").value);
+        for (var n = 1; n < 10; n++) {
+            document.write(num * n + '<br>');
+        }
+    }  
+</script>
 </body>
 </html>
