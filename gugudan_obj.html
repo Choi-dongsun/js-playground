@@ -9,35 +9,32 @@
 <body>
     <h1>객체를 활용한 구구단 출력</h1>
     <script>
-        var gugudan = {}
-
-        gugudan.calculate = function(x) {
-            var results = [];
-            for (i = 1; i < 10; i++) {
-                results[i] = x * i;
-            };
-            return results;
-        };
-
-        gugudan.printResult = function(x, results) {
-            document.write("<h2>" + x + "단 </h2>")
-            for (i = 1; i < results.length; i++) {
-                var multiple = x * i;
-                document.write(x + " X " + i + " = " + multiple + "<br>");
+        gugudan = {};
+        gugudan.results = [];
+        gugudan.current = -1;
+        gugudan.calculate = function(n) {
+            this.current = n;
+            for (i = 0; i < 9; i++) {
+                this.results[i] = n * (i + 1);
             };
         };
-
-        gugudan.main = function() {
-            console.log("메인함수가 실행되었습니다.")
-            for (x = 2; x < 10; x++) {
-                var result = this.calculate(x);
-                this.printResult(x, result);
-            };
+        
+        gugudan.print = function() {
+            document.write("<h2>" + this.current + "단 </h2>")
+            for (var i = 0; i < 9; i++) {
+                document.write(this.results[i] + "<br>");
+            }
         };
 
+        main = function() {
+            console.log("메인 함수가 실행되었습니다.")
+            for (var i = 2; i < 10; i++) {
+                gugudan.calculate(i);
+                gugudan.print();
+            }
+        };
 
-        gugudan.main();
-
+        main();
     </script>
 </body>
 </html>
