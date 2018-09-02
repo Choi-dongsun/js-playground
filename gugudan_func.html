@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 구구단 출력하기 </title>
+</head>
+<body>
+    <h1>함수를 활용한 구구단 출력</h1>
+    <script>
+
+// 각 단의 결과를 배열에 담는 로직
+        function gugudan(x) {
+            var results = [];
+            for (i = 1; i < 10; i++) {
+                results[i] = x * i;
+            }
+            return results;
+        }
+
+// 배열을 화면에 출력하는 로직
+        function printResult(x, results) {
+            document.write("<h2>" + x + "단 </h2>")
+            for (i = 1; i < results.length; i++) {
+                var multiple = x * i;
+                document.write(x + " X " + i + " = " + multiple + "<br>");
+            }
+        }
+
+// 구구단 메인 함수
+        function main() {
+            console.log("메인함수가 실행되었습니다.")
+            for (x = 2; x < 10; x++) {
+                var result = gugudan(x);
+                printResult(x, result);
+            };
+        };
+        
+        main();
+    </script>
+
+</body>
+</html>
