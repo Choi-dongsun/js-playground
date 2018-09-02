@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 구구단 출력하기 </title>
+</head>
+<body>
+    <h1>배열, 이중루프를 이용한 구구단 출력</h1>
+    <script>
+    var results = [];
+
+    for (var dan = 2; dan < 10; dan++) {
+        for (var i = 1; i < 10; i++) {
+            num = dan * i;
+            results[i] = [num];  
+        }
+
+        document.write("<h2>" + dan + "단</h2>");
+
+        for (i = 1; i < 10; i++) {
+            result = dan + " X " + i + " = " + results[i] + "<br>";
+            document.write(result);
+        }
+    };
+
+    </script>
+</body>
+</html>
