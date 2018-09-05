@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>문자열 계산기 구현하기</h1>
+    <div id="show"></div>
+
+    <script>
+        function main() {
+            var n1 = Number(prompt("첫번째 숫자를 입력해주세요"));
+            var count = 2;
+
+            var show = document.getElementById('show');
+
+            while (true) {
+                var op = prompt("연산자를 입력해주세요");
+
+                if (op === 'q') {
+                    break;
+                }
+
+                var n = Number(prompt(count + "번째 숫자를 입력해주세요"));
+
+                if (op === "+") {
+                    n1 += n;                    
+                } else if (op === "-") {
+                    n1 -= n;                    
+                } else if (op === "*") {
+                    n1 *= n;                    
+                } else if (op === "/") {
+                    n1 /= n;                    
+                } else {
+                    n1 = "중간오류" ;
+                    break;
+                }
+
+                count++;
+            };
+
+            show.innerHTML = "최종 결과값은 " + n1 + "입니다.";
+        };
+
+        main();
+    </script>
+
+</body>
+</html>
