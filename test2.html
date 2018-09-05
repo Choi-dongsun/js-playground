@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+    // 입력받은 숫자가 홀수인지 짝수인지를 알려주는 프로그램을 작성해 봅시다.
+        var n = prompt("숫자를 입력해주세요.")
+        var number = Number(n)
+        if (number % 2 === 0) {
+            console.log("짝수에요^^")
+        } else {
+            console.log("홀수에요^^")
+        }
+
+        var s = prompt("문자를 입력해주세요")
+        if (s === s.toUpperCase()) {
+            console.log("대문자 문장입니다.")
+        } else if (s === s.toLowerCase()) {
+            console.log("소문자 문장입니다.")
+        } else {
+            console.log("보통 문장입니다.")
+        }
+
+    // 입력받은 문자가 대문자로 되어 있으면 ‘대문자 문장입니다.’ 
+    // 소문자로 되어 있으면 ‘소문자 문장입니다.’ 그 외에는 ‘보통 문장입니다.’ 라고 출력하는 프로그램을 작성해 보세요.
+    </script>
+    
+</body>
+</html>

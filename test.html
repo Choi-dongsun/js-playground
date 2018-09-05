@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>연습문제</title>
+</head>
+<body>
+    <script>
+        var input1 = prompt("첫번째 숫자를 입력해주세요");
+        var input2 = prompt("두번째 숫자를 입력해주세요");
+        var n1 = Number(input1);
+        var n2 = Number(input2);
+        console.log("덧셈 결과는 " + (n1 + n2) + "입니다.");
+        console.log("뺄셈 결과는 " + (n1 - n2) + "입니다.");
+        console.log("곱셈 결과는 " + (n1 * n2) + "입니다.");
+        console.log("나눗셈 결과는 " + (n1 / n2) + "입니다.");
+
+        var input3 = prompt("체중을 입력해주세요");
+        var input4 = prompt("키를 입력해주세요");
+        var n3 = Number(input3);
+        var n4 = Number(input4);
+        document.write("당신의 BMI지수는 " + (n3 / (n4/100 * n4/100)) + "입니다.") 
+
+        var input5 = prompt("화씨 온도를 입력해주세요");
+        var n5 = Number(input5);
+        console.log("현재 섭씨 온도는 " + ((n5-32) * 5) / 9 + "입니다.") 
+
+        var input6 = prompt("문자열을 입력해주세요");
+        var n6 = input6.length
+        console.log("입력한 문자열의 길이는 " + n6 + "입니다.") 
+
+    </script>
+</body>
+</html>
