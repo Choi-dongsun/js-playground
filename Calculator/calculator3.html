@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>문자열 계산기 구현하기</h1>
+    <div>
+        첫번째 수 : <input type="text" id="n1"> <br>
+        사칙연산 : <input type="text" id="op"> <br>
+        두번째 수 : <input type="text" id="n2"> <br>
+        <button onclick="calc()">실행</button> <br>
+    </div>
+
+    <div id="show"></div>
+
+    <script>
+        function calc() {
+            var n1 = Number(document.getElementById("n1").value);
+            var n2 = Number(document.getElementById("n2").value);
+            var op = document.getElementById("op").value;
+
+            var show = document.getElementById("show");
+            var str = "";
+
+            // if (op === '+') {
+            //     str += "덧셈 : " + (n1 + n2);
+            // } else if (op === '-') {
+            //     str += "뺄셈 : " + (n1 - n2);
+            // } else if (op === '*') {
+            //     str += "곱셈 : " + (n1 * n2);
+            // } else if (op === '/') {
+            //     str += "나눗셈 : " + (n1 / n2);
+            // } else {
+            //     str += "사칙연산 연산자를 입력해주세요";
+            // };
+
+            switch (op) {
+                case "+":
+                str += "덧셈 : " + (n1 + n2);
+                break;
+                case "-":
+                str += "뺄셈 : " + (n1 - n2);
+                break;
+                case "*":
+                str += "곱셈 : " + (n1 * n2);
+                break;
+                case "/":
+                str += "나눗셈 : " + (n1 / n2);
+                break;
+                default:
+                str += "사칙연산 연산자를 입력해주세요";
+            }
+            
+            show.innerHTML = str;
+        };
+    </script>
+    
+</body>
+</html>
