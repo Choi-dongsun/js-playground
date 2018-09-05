@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단 8,9단 - HTML화면출력</title>
+</head>
+<body>
+    <h1> if문 사용해 보기 </h1>
+    출력할 단 : <input type="text" id="num">
+    <button onclick="display()"> 확인 </button>
+<script>
+    function display() {
+        var input = Number(document.getElementById('num').value);
+
+        if (input >= 2 && input <= 9) {
+            for (var n = 1 ; n < 10 ; n++) {
+                document.write(input * n + '<br>');
+            }
+        } else {
+            alert("2이상, 9이하의 값만 입력할 수 있습니다.");
+        }
+    }
+</script>
+</body>
+</html>

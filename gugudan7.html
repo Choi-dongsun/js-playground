@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단 8,9단 - 콘솔출력</title>
+</head>
+<body>
+<script>
+    var input = Number(prompt("원하는 단 숫자를 입력해주세요"))
+
+    while (true) {
+        if (input >= 2 && input <= 9) {
+            for (var n = 1 ; n < 10 ; n++) {
+                console.log(input * n);
+            }
+            break;
+        } else {
+            alert("2이상, 9이하의 값만 입력할 수 있습니다.")
+            var input = Number(prompt("원하는 단 숫자를 입력해주세요"));
+        }  
+    }
+</script>
+</body>
+</html>
